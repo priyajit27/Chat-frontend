@@ -106,6 +106,9 @@ function SideDrawer() {
   return (
     <>
       <Box d="flex" justifyContent="space-between" alignItems="center" bg="white" w="100%" p="5px 10px 5px 10px" borderWidth="5px" >
+      <Text fontSize="2xl" fontFamily="Work sans" textAlign='center' fontWeight='bold'>
+          Chat app
+        </Text>
         <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
           <Button variant="ghost" onClick={onOpen}>
             <i className="fas fa-search"></i>
@@ -114,9 +117,9 @@ function SideDrawer() {
             </Text>
           </Button>
         </Tooltip>
-        <Text fontSize="2xl" fontFamily="Work sans">
+        {/* <Text fontSize="2xl" fontFamily="Work sans" textAlign='center' fontWeight='bold'>
           Chat app
-        </Text>
+        </Text> */}
         <div>
             <Menu>
             <MenuButton p={1}>
