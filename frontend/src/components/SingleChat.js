@@ -15,7 +15,7 @@ import animationData from "../animations/3759-typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/Chatprovider";
-const ENDPOINT = "http://localhost:5000"; 
+const ENDPOINT = "https://chat-backend-vtgy.onrender.com"; 
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
