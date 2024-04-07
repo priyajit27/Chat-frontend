@@ -1,5 +1,5 @@
 import {Modal,ModalOverlay,ModalContent,ModalHeader,ModalFooter,ModalBody,ModalCloseButton,Button, useDisclosure, FormControl, Input, useToast, Box} from "@chakra-ui/react";
-  import axios from "axios";
+  import { Axios } from "../Axios";
   import { useState } from "react";
   import { ChatState } from "../../Context/Chatprovider";
   import UserBadgeItem from "../userAvatar/UserBadgeItem";
@@ -44,7 +44,7 @@ import {Modal,ModalOverlay,ModalContent,ModalHeader,ModalFooter,ModalBody,ModalC
             Authorization: `Bearer ${user.token}`,
           },
         };
-        const { data } = await axios.get(`/api/user?search=${search}`, config);
+        const { data } = await Axios.get(`/api/user?search=${search}`, config);
         console.log(data);
         setLoading(false);
         setSearchResult(data);
@@ -82,7 +82,7 @@ import {Modal,ModalOverlay,ModalContent,ModalHeader,ModalFooter,ModalBody,ModalC
             Authorization: `Bearer ${user.token}`,
           },
         };
-        const { data } = await axios.post(
+        const { data } = await Axios.post(
           `/api/chat/group`,
           {
             name: groupChatName,

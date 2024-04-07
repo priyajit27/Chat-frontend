@@ -1,6 +1,6 @@
 import { FormControl, FormLabel, Input, VStack,InputGroup,Button,InputRightElement,useToast} from '@chakra-ui/react'
 import React, { useState } from 'react'
-import axios from 'axios'
+import { Axios } from '../Axios';
 import { useNavigate } from 'react-router-dom';
 import { ChatState } from "../../Context/Chatprovider";
 
@@ -50,7 +50,7 @@ const Signup = () => {
           "Content-type": "application/json",
         },
       };
-      const { data } = await axios.post("/api/user",
+      const { data } = await Axios.post("/api/user",
         {
           name,email,password,pic,
         },

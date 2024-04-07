@@ -4,7 +4,7 @@ import {useToast, FormControl, FormLabel,Input, InputGroup, InputRightElement} f
 import { VStack } from "@chakra-ui/layout";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { Axios } from '../Axios';
 import { ChatState } from "../../Context/Chatprovider";
 
 
@@ -40,7 +40,7 @@ const Login = () => {
         },
       };
 
-      const { data } = await axios.post(
+      const { data } = await Axios.post(
         "/api/user/login",
         { email, password },
         config
