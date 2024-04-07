@@ -106,8 +106,8 @@ function SideDrawer() {
   return (
     <>
       <Box d="flex" justifyContent="space-between" alignItems="center" bg="white" w="100%" p="5px 10px 5px 10px" borderWidth="5px" >
-      <Text fontSize="2xl" fontFamily="Work sans" textAlign='center' fontWeight='bold'>
-          Chat app
+      <Text fontSize="4xl"   fontFamily="cursive" textAlign='center' fontWeight='bold' color="orange.500" textDecoration="underline">
+      Chatterly app
         </Text>
         <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
           <Button variant="ghost" onClick={onOpen}>

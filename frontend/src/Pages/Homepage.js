@@ -23,7 +23,7 @@ const Homepage = () => {
         m="40px 0 15px 0"
         borderRadius="lg"
         borderWidth="1px">
-        <Text fontSize="4xl" fontFamily="Work sans" textAlign='center' fontWeight='bold'>Chat</Text>
+        <Text fontSize="5xl" fontFamily="cursive" textAlign='center' fontWeight='bold' color="orange.600">Chatterly</Text>
      </Box>
      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
      <Tabs isFitted variant="soft-rounded">

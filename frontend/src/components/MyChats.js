@@ -60,18 +60,19 @@ const MyChats = ({ fetchAgain }) => {
         pb={3}
         px={3}
         fontSize={{ base: "28px", md: "30px" }}
-        fontFamily="Work sans"
         d="flex"
         w="100%"
         justifyContent="space-between"
         alignItems="center"
+        fontFamily="cursive"
       >
-        My Chats
+        My Chats..
         <GroupChatModal>
           <Button
             d="flex"
             fontSize={{ base: "17px", md: "10px", lg: "17px" }}
             rightIcon={<AddIcon />}
+            fontFamily="sans-serif"
           >
             New Group Chat
           </Button>
