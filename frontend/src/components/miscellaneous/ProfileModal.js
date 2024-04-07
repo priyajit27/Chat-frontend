@@ -28,8 +28,8 @@ const ProfileModal = ({ user, children }) => {
         <ModalOverlay />
         <ModalContent h="410px">
           <ModalHeader
-            fontSize="40px"
-            fontFamily="Work sans"
+            fontSize="30px"
+            fontFamily="cursive"
             d="flex"
             justifyContent="center"
           >
@@ -50,7 +50,7 @@ const ProfileModal = ({ user, children }) => {
             />
             <Text
               fontSize={{ base: "28px", md: "30px" }}
-              fontFamily="Work sans"
+              fontFamily="sans-serif"
             >
               Email: {user.email}
             </Text>
