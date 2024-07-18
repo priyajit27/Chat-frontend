@@ -163,92 +163,40 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     <>
       {selectedChat ? (
         <>
-          <Text
-            fontSize={{ base: "28px", md: "30px" }}
-            pb={3}
-            px={2}
-            w="100%"
-            fontFamily="cursive"
-            d="flex"
-            justifyContent={{ base: "space-between" }}
-            alignItems="center"
-          >
-            <IconButton
-              d={{ base: "flex", md: "none" }}
-              icon={<ArrowBackIcon />}
-              onClick={() => setSelectedChat("")}
-            />
+          <Text fontSize={{ base: "28px", md: "30px" }} pb={3}   px={2} w="100%" fontFamily="cursive" d="flex" justifyContent={{ base: "space-between" }} alignItems="center" >
+            <IconButton d={{ base: "flex", md: "none" }}  icon={<ArrowBackIcon />}  onClick={() => setSelectedChat("")} />
             {messages &&
               (!selectedChat.isGroupChat ? (
                 <>
                   {getSender(user, selectedChat.users)}
-                  <ProfileModal
-                    user={getSenderFull(user, selectedChat.users)}
-                  />
+                  <ProfileModal  user={getSenderFull(user, selectedChat.users)}/>
                 </>
               ) : (
                 <>
                   {selectedChat.chatName.toUpperCase()}
-                  <UpdateGroupChatModal
-                    fetchMessages={fetchMessages}
-                    fetchAgain={fetchAgain}
-                    setFetchAgain={setFetchAgain}
-                  />
+                  <UpdateGroupChatModal fetchMessages={fetchMessages} fetchAgain={fetchAgain} setFetchAgain={setFetchAgain}/>
                 </>
               ))}
           </Text>
-          <Box
-            display="flex"
-            flexDir="column"
-            justifyContent="flex-end"
-            p={3}
-            bg="#E8E8E8"
-            w="100%"
-            h="94%"
-            borderRadius="lg"
-            overflowY="hidden"
-          >
+          <Box display="flex" flexDir="column" justifyContent="flex-end" p={3} bg="#E8E8E8" w="100%" h="94%" borderRadius="lg" overflowY="hidden" >
             {loading ? (
-              <Spinner
-                size="xl"
-                w={20}
-                h={20}
-                alignSelf="center"
-                margin="auto"
-              />
+              <Spinner  size="xl"  w={20}  h={20}  alignSelf="center"  margin="auto"/>
             ) : (
               <div className="messages">
                 <ScrollableChat messages={messages} />
               </div>
             )}
 
-            <FormControl
-              onKeyDown={sendMessage}
-              id="first-name"
-              isRequired
-              mt={3}
-            >
+            <FormControl onKeyDown={sendMessage} id="first-name" isRequired   mt={3}>
               {istyping ? (
                 <div>
-                  <Lottie
-                    options={defaultOptions}
-                   // height={100}
-                    animationData={animationData}
-                    width={570}
-                  style={{ marginBottom: 5, marginLeft: 0 ,width:100,height:50}}
+                  <Lottie options={defaultOptions}   animationData={animationData}   width={570} style={{ marginBottom: 5, marginLeft: 0 ,width:100,height:50}}
                   />
-                  {/* Loading.... */}
-                </div>
+                  {/* Loading.... */}</div>
               ) : (
                 <></>
               )}
-              <Input
-                variant="filled"
-                bg="#E0E0E0"
-                placeholder="Enter a message.."
-                value={newMessage}
-                onChange={typingHandler}
-              />
+              <Input variant="filled" bg="#E0E0E0" placeholder="Enter a message.." value={newMessage} onChange={typingHandler}/>
             </FormControl>
           </Box>
         </>
@@ -260,8 +208,5 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           </Text>
         </Box>
       )}
-    </>
-  );
-};
-
+    </>);};
 export default SingleChat;

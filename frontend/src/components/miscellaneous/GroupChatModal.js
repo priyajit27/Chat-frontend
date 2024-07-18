@@ -118,37 +118,20 @@ import {Modal,ModalOverlay,ModalContent,ModalHeader,ModalFooter,ModalBody,ModalC
         <Modal onClose={onClose} isOpen={isOpen} isCentered>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader
-              fontSize="35px"
-              fontFamily="Work sans"
-              d="flex"
-              justifyContent="center"
-            >
+            <ModalHeader fontSize="35px" fontFamily="Work sans" d="flex" justifyContent="center">
               Create Group Chat
             </ModalHeader>
             <ModalCloseButton />
             <ModalBody d="flex" flexDir="column" alignItems="center">
               <FormControl>
-                <Input
-                  placeholder="Chat Name"
-                  mb={3}
-                  onChange={(e) => setGroupChatName(e.target.value)}
-                />
+                <Input placeholder="Chat Name" mb={3} onChange={(e) => setGroupChatName(e.target.value)}  />
               </FormControl>
               <FormControl>
-                <Input
-                  placeholder="Add Users eg: John, Piyush, Jane"
-                  mb={1}
-                  onChange={(e) => handleSearch(e.target.value)}
-                />
+                <Input placeholder="Add Users eg: John, Piyush, Jane" mb={1} onChange={(e) => handleSearch(e.target.value)} />
               </FormControl>
               <Box w="100%" d="flex" flexWrap="wrap">
                 {selectedUsers.map((u) => (
-                  <UserBadgeItem
-                    key={u._id}
-                    user={u}
-                    handleFunction={() => handleDelete(u)}
-                  />
+                  <UserBadgeItem key={u._id} user={u} handleFunction={() => handleDelete(u)} />
                 ))}
               </Box>
               {loading ? (
@@ -158,10 +141,7 @@ import {Modal,ModalOverlay,ModalContent,ModalHeader,ModalFooter,ModalBody,ModalC
                 searchResult
                   ?.slice(0, 4)
                   .map((user) => (
-                    <UserListItem
-                      key={user._id}
-                      user={user}
-                      handleFunction={() => handleGroup(user)}
+                    <UserListItem key={user._id} user={user} handleFunction={() => handleGroup(user)}
                     />
                   ))
               )}
